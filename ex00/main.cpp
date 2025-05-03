@@ -37,7 +37,5 @@ int main()
 		std::cout << "(search num) " << target << "  (get_num) " << *get_pos << std::endl;
 	else
 		std::cout << "Not found\n";
-
-
-    return 0;
+	return (0);
 }

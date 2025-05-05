@@ -7,16 +7,16 @@ MutantStack<T>::MutantStack()
 }
 
 template<typename T>
-MutantStack<T>::MutantStack(const MutantStack &copy)
+MutantStack<T>::MutantStack(const MutantStack &copy): std::stack<T>(copy)
 {
 	*this = copy;
 }
 
 template<typename T>
-MutantStack<T> &MutantStack<T>::operator=(const MutantStack &src)
+MutantStack<T>& MutantStack<T>::operator=(const MutantStack<T>& src)
 {
 	if (this != &src)
-		this->c = src.c;
+		std::stack<T>::operator=(src);
 	return (*this);
 }
 
@@ -39,15 +39,15 @@ typename MutantStack<T>::iterator MutantStack<T>::end()
 }
 
 template<typename T>
-typename MutantStack<T>::const_iterator MutantStack<T>::cbegin()
+typename MutantStack<T>::const_iterator MutantStack<T>::cbegin() const
 {
-	return (this->c.cbegin());
+	return (this->c.begin());
 }
 
 template<typename T>
-typename MutantStack<T>::const_iterator MutantStack<T>::cend()
+typename MutantStack<T>::const_iterator MutantStack<T>::cend() const
 {
-	return (this->c.cend());
+	return (this->c.end());
 }
 
 template<typename T>
@@ -63,13 +63,13 @@ typename MutantStack<T>::reverse_iterator MutantStack<T>::rend()
 }
 
 template<typename T>
-typename MutantStack<T>::const_reverse_iterator MutantStack<T>::crbegin()
+typename MutantStack<T>::const_reverse_iterator MutantStack<T>::crbegin() const
 {
-	return (this->c.crbegin());
+	return (this->c.rbegin());
 }
 
 template<typename T>
-typename MutantStack<T>::const_reverse_iterator MutantStack<T>::crend()
+typename MutantStack<T>::const_reverse_iterator MutantStack<T>::crend() const
 {
-	return (this->crend());
+	return (this->rend());
 }

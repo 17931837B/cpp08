@@ -1,6 +1,6 @@
 C++ = c++
 C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-INFILES = 	main.cpp Span.cpp
+INFILES = 	main.cpp
 
 OBJFILES = $(INFILES:.cpp=.o)
 

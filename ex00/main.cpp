@@ -1,7 +1,7 @@
 #include "easyfind.hpp"
 #include <iostream>
 #include <vector>
-#include <algorithm> // std::find との結果を比較するためにインクルード
+#include <algorithm>
 
 int main()
 {

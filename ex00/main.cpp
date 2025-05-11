@@ -8,7 +8,7 @@ int main()
 	std::vector<int> nums;
 	int	i = 0;
 	int	target;
-	typename std::vector<int>::iterator	get_pos;
+	std::vector<int>::iterator	get_pos;
 
 	while (i < 10)
 	{

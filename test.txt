@@ -1,1 +1,0 @@
-stackはpush,pop,topのみ提供コンテナアダプタ

@@ -1,6 +1,6 @@
-C++ = c++
-C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-INFILES = 	main.cpp
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+INFILES = 	main.cpp 
 
 OBJFILES = $(INFILES:.cpp=.o)
 
@@ -9,10 +9,10 @@ NAME = test
 all: $(NAME)
 
 $(NAME):$(OBJFILES)
-	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME) 
+	$(CXX) $(CXXFLAGS) $(OBJFILES) -o $(NAME) 
 
 %.o: %.cpp
-	$(C++) $(C++_FLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJFILES)

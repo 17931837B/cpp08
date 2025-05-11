@@ -58,15 +58,16 @@ int Span::longestSpan() const
 		throw CantSpan();
 	std::vector<unsigned int> sortVec;
 	size_t max = 0;
-	size_t i = 1;
+	// size_t i = 1;
 	sortVec = this->con;
 	std::sort(sortVec.begin(), sortVec.end());
-	while (i < sortVec.size())
-	{
-		if (sortVec[i] - sortVec[i - 1] > max)
-			max = sortVec[i] - sortVec[i - 1];
-		i++;
-	}
+	// while (i < sortVec.size())
+	// {
+	// 	if (sortVec[i] - sortVec[i - 1] > max)
+	// 		max = sortVec[i] - sortVec[i - 1];
+	// 	i++;
+	// }
+	max = *(sortVec.end() - 1) - *sortVec.begin();
 	return (max);
 }
 

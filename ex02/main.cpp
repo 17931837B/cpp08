@@ -55,13 +55,15 @@ void test3()
 	ms.push(4);
 	showStack(ms);
 	std::cout << "Using cbegin() and cend(): ";
-	for (typename MutantStack<int>::const_iterator it = ms.cbegin(); it != ms.cend(); ++it){
+	for (MutantStack<int>::const_iterator it = ms.cbegin(); it != ms.cend(); it++)
+	{
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
 
 	std::cout << "Using rbegin() and rend(): ";
-	for (typename MutantStack<int>::reverse_iterator it = ms.rbegin(); it != ms.rend(); ++it) {
+	for (MutantStack<int>::reverse_iterator it = ms.rbegin(); it != ms.rend(); it++)
+	{
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
